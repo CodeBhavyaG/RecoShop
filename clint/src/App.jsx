@@ -1,33 +1,26 @@
-
-import './App.css'
-import Card from './components/card.jsx'
-import { useEffect,useState } from 'react';
+import './App.css';
+import Card from './components/card.jsx';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const [arr,setarr]=useState([])
-  useEffect(()=>{
-    fetch("https://stunning-succotash-pj966456x9rx26rw4-5000.app.github.dev/reconnect")
-    .then(res=>res.json())
-    .then(data=>setarr(data.hits))
-    .catch(error=>console.error(error)
-    )
-  },[])
+  const [arr, setArr] = useState([]);
 
-  console.log(arr)
+  useEffect(() => {
+    fetch("https://potential-space-waffle-jjgp9xj5pvqrhp7vq-5000.app.github.dev/reconnect")
+      .then(res => res.json())
+      .then(data => setArr(data.flowers.hits))   
+      .catch(error => console.error(error));
+  }, []);
 
+  console.log(arr);
 
   return (
     <div className="app">
-
-      
       <header className="topbar">
         <h2>RecoShop</h2>
       </header>
 
-      
       <div className="body">
-
-       
         <aside className="sidebar">
           <ul>
             <li>Dashboard</li>
@@ -35,7 +28,8 @@ function App() {
             <li>Orders</li>
             <li>Profile</li>
           </ul>
-        </aside>        
+        </aside>
+
         <main className="content">
           <div className="card-container">
             {arr.map((card) => (
@@ -48,11 +42,10 @@ function App() {
             ))}
           </div>
         </main>
-
       </div>
     </div>
   );
 }
 
-
 export default App;
+
