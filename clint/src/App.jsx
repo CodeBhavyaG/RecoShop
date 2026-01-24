@@ -1,10 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import Card from './components/card.jsx'
+import ConnectionTest from './test.jsx'
 
-function App() {
+/*function App() {
   const cardData = Array.from({ length: 10 }, (_, index) => ({
     id: index,
     title: `Card Title ${index + 1}`,
@@ -15,15 +14,15 @@ function App() {
   return (
     <div className="app">
 
-      {/* TOP SECTION */}
+      
       <header className="topbar">
         <h2>RecoShop</h2>
       </header>
 
-      {/* BODY SECTION */}
+      
       <div className="body">
 
-        {/* LEFT PART */}
+       
         <aside className="sidebar">
           <ul>
             <li>Dashboard</li>
@@ -33,7 +32,7 @@ function App() {
           </ul>
         </aside>
 
-        {/* MIDDLE PART */}
+        
         <main className="content">
           <div className="card-container">
             {cardData.map((card) => (
@@ -48,6 +47,24 @@ function App() {
         </main>
 
       </div>
+    </div>
+  );
+}
+*/
+
+
+function App() {
+  return (
+    <div className="App">
+      {/* This is your safety sandbox */}
+      <ConnectionTest /> 
+
+      <hr />
+      
+      {/* Your main app content stays here, untouched */}
+      <header>
+        <h1>My Main App Content</h1>
+      </header>
     </div>
   );
 }
