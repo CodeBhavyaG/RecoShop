@@ -13,8 +13,6 @@ function App() {
     )
   },[])
 
-  console.log(arr)
-
 
   return (
     <div className="app">
@@ -41,6 +39,7 @@ function App() {
             {arr.map((card) => (
               <Card
                 key={card.id}
+                card={card}
                 title={card.user}
                 description={card.tags}
                 image={card.largeImageURL}
