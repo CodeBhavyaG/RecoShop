@@ -1,9 +1,8 @@
 
 import './App.css'
 import Card from './components/card.jsx'
-import ConnectionTest from './test.jsx'
 
-/*function App() {
+function App() {
   const cardData = Array.from({ length: 10 }, (_, index) => ({
     id: index,
     title: `Card Title ${index + 1}`,
@@ -50,23 +49,6 @@ import ConnectionTest from './test.jsx'
     </div>
   );
 }
-*/
 
-
-function App() {
-  return (
-    <div className="App">
-      {/* This is your safety sandbox */}
-      <ConnectionTest /> 
-
-      <hr />
-      
-      {/* Your main app content stays here, untouched */}
-      <header>
-        <h1>My Main App Content</h1>
-      </header>
-    </div>
-  );
-}
 
 export default App;
