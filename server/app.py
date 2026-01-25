@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify ,request
 from flask_cors import CORS
 import requests
 
@@ -41,6 +41,20 @@ def index():
 
     return jsonify(joined_data)
 
+
+@app.route('/handle-click', methods=['POST'])
+def handle_click():
+    # 1. Get the JSON data sent from React
+    data = request.get_json()
+    
+    # 2. Access specific fields
+    item_id = data.get('id')
+    username = data.get('title')
+    
+    print(f"User clicked item {item_id} by {username}") # This shows in your terminal
+
+    # 3. Always send a response back to React
+    return jsonify({"status": "success", "received": item_id}), 200
+
 if __name__ == "__main__":
     app.run(debug=True)
-
