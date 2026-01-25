@@ -30,12 +30,16 @@ def index():
         data2 = {"error": f"API2 error {response2.status_code}"}
 
 
-    combined_data = [
-         data1,
-         data2]
+    
+    
+    
+    joined_data = data1.copy()
+    joined_data['hits'].extend(data2['hits'])
+    joined_data['total'] += data2['total']
+    joined_data['totalHits'] += data2['totalHits']
     
 
-    return jsonify(combined_data)
+    return jsonify(joined_data)
 
 if __name__ == "__main__":
     app.run(debug=True)

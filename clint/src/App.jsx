@@ -6,9 +6,9 @@ function App() {
   const [arr, setArr] = useState([]);
 
   useEffect(() => {
-    fetch("https://potential-space-waffle-jjgp9xj5pvqrhp7vq-5000.app.github.dev/reconnect")
+    fetch("https://stunning-succotash-pj966456x9rx26rw4-5000.app.github.dev/reconnect")
       .then(res => res.json())
-      .then(data => setArr(data.flowers.hits))   
+      .then(data => setArr(data.hits))   
       .catch(error => console.error(error));
   }, []);
 
@@ -37,7 +37,7 @@ function App() {
                 key={card.id}
                 title={card.user}
                 description={card.tags}
-                image={card.largeImageURL}
+                image={card.previewURL}
               />
             ))}
           </div>
