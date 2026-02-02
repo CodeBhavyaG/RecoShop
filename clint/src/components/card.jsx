@@ -1,27 +1,41 @@
 import './card.css'
 
 
-export default function Card({ card ,title, description, image }) {
+export default function Card({ card, title, description, image, setRecommendations }) {
 
   const clickButton = async (itemData) => {
-  try {
-        const response = await fetch("https://stunning-succotash-pj966456x9rx26rw4-5000.app.github.dev/handle-click", {
-          method: "POST", // 1. Use POST to send data
-          headers: {
-            "Content-Type": "application/json", // 2. Tell Flask to expect JSON
-          },
-          body: JSON.stringify({ 
-            id: itemData.id, 
-            title: itemData.user 
-          }), // 3. Turn your JS object into a string
-        });
 
-        const result = await response.json();
-        console.log("Response from Flask:", result);
-      } catch (error) {
-        console.error("Error sending data:", error);
+  const recIndex =
+  itemData.id
+    .split("")
+    .reduce((acc, char) => acc + char.charCodeAt(0), 0) % 3000;
+
+
+  try {
+    const response = await fetch(
+      "http://127.0.0.1:5000/recommend",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+        image: itemData.urls.regular
+        }),
       }
-  };
+    );
+
+    const result = await response.json();
+    console.log("AI Recommendations:", result);
+
+    // We will display this next
+    setRecommendations(result);
+    console.log(result);
+
+  } catch (error) {
+    console.error("Error fetching recommendations:", error);
+  }
+};
+
+
 
   return (
     <div className="card" >
