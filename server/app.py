@@ -12,8 +12,8 @@ import random
 
 
 "load_dotenv()"
-
-UNSPLASH_ACCESS_KEY = "7cYn0Bhj1-rY5ssByImS323g5Pp2fvPwNtxQj7WS-qA"#os.getenv("UNSPLASH_ACCESS_KEY")
+#=========================Code will not work without api========================
+UNSPLASH_ACCESS_KEY = #os.getenv("UNSPLASH_ACCESS_KEY")
 
 print("Unsplash key loaded:", bool(UNSPLASH_ACCESS_KEY))
 print("Unsplash key value:", UNSPLASH_ACCESS_KEY)
