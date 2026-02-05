@@ -1,0 +1,1 @@
+This folder was made for CNN based recommendation system but for flexibility it is changed to a embedding model so this folder is exatra and doesnt do anything in the main code
