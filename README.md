@@ -13,13 +13,7 @@ The system uses React for the frontend, Flask for the backend, the Unsplash API 
 You can add a demonstration video of the project below. Simply replace the placeholder link with your own video URL.
 
 **Project Walkthrough Video:**
-[Click here to watch the demo video](PASTE_YOUR_VIDEO_LINK_HERE)
-
-If you are hosting the README on GitHub, you can also embed the video using the following markdown format:
-
-```
-[![Watch the video](thumbnail_image_url)](video_link)
-```
+[Click here to watch the demo video]((https://drive.google.com/file/d/1-W0GD4yKJurERVk5TwRUOPYzvRh5fnCx/view?usp=drive_link))
 
 ---
 
@@ -174,12 +168,30 @@ Request body:
 }
 ```
 
-
-## Conclusion
-
-RecoShop demonstrates how AI and web development can be combined to create intelligent and interactive applications. By leveraging CLIP embeddings and Unsplash data, the project delivers real visual recommendations rather than simple keyword matching.
+Returns AI-generated visually similar images ranked using CLIP embeddings and cosine similarity.
+Returns AI‑generated visually similar images.
 
 ---
+
+## Future Improvements
+
+* Add user authentication
+* Save user preferences and history
+* Caching of embeddings for faster performance
+* Pagination and infinite scrolling
+* Support for more image categories
+* Mobile application version
+
+---
+
+## Performance Notes
+
+Because the recommendation system uses the CLIP deep learning model to compute image embeddings in real time, generating recommendations involves multiple neural network inferences and similarity calculations. As a result:
+
+* Recommendation latency can be higher than normal API responses (typically a few seconds per request)
+* Performance depends on CPU/GPU speed and internet connection
+* Each click requires downloading and processing multiple images
+
 
 ## Author
 
@@ -189,3 +201,6 @@ Feel free to contribute or improve the project!
 
 ---
 
+### License
+
+This project is for educational purposes and uses the Unsplash API under their developer guidelines.
