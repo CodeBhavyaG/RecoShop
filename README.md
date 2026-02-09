@@ -174,20 +174,6 @@ Request body:
 }
 ```
 
-Returns AI‑generated visually similar images.
-
----
-
-## Future Improvements
-
-* Add user authentication
-* Save user preferences and history
-* Caching of embeddings for faster performance
-* Pagination and infinite scrolling
-* Support for more image categories
-* Mobile application version
-
----
 
 ## Conclusion
 
@@ -203,6 +189,3 @@ Feel free to contribute or improve the project!
 
 ---
 
-### License
-
-This project is for educational purposes and uses the Unsplash API under their developer guidelines.
