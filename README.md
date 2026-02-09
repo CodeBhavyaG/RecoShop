@@ -13,7 +13,7 @@ The system uses React for the frontend, Flask for the backend, the Unsplash API 
 You can add a demonstration video of the project below. Simply replace the placeholder link with your own video URL.
 
 **Project Walkthrough Video:**
-[Click here to watch the demo video]((https://drive.google.com/file/d/1-W0GD4yKJurERVk5TwRUOPYzvRh5fnCx/view?usp=drive_link))
+[Click here to watch the demo video](https://drive.google.com/file/d/1-W0GD4yKJurERVk5TwRUOPYzvRh5fnCx/view?usp=drive_link)
 
 ---
 
